@@ -1,119 +1,32 @@
-# GenAI Sports Tournament Calendar
+# Stapu GenAI Internship Project
 
-A simple GenAI-powered application that collects and displays upcoming sports tournaments.
+## What This App Does
 
-## 🚀 Quick Start (5 minutes)
+This is a **GenAI-powered sports tournament calendar application** that:
 
-### 1. Setup Virtual Environment
-```bash
-# Create virtual environment
-python -m venv venv
+- **Collects** upcoming sports tournaments from the web using AI
+- **Displays** them in a beautiful web interface
+- **Filters** tournaments by sport, level, and date
+- **Exports** data to CSV/JSON formats
+- **Supports** multiple sports: Cricket, Football, Badminton, Running, Gym, Cycling, Swimming, Kabaddi, Yoga, Basketball, Chess, Table Tennis
+- **Covers** various levels: Corporate, School, College, Club, District, State, Regional, National, International
 
-# Activate virtual environment
-# On Windows:
-venv\Scripts\activate
-# On Mac/Linux:
-source venv/bin/activate
-```
+## Quick Start
 
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+1. **Setup**: `python -m venv venv && venv\Scripts\activate`
+2. **Install**: `pip install -r requirements.txt`
+3. **Configure**: Copy `env_example.txt` to `.env` and add your OpenAI API key
+4. **Initialize**: `python main.py init`
+5. **Run**: `python main.py streamlit`
 
-### 3. Setup Environment Variables
-```bash
-# Copy environment file
-copy env_example.txt .env
+The app will open in your browser at http://localhost:8501
 
-# Edit .env file with your OpenAI API key
-# Get free $5 credit at: https://platform.openai.com/
-```
+## Features
 
-### 4. Initialize Database
-```bash
-python main.py init
-```
+- **AI-Powered Data Collection**: Automatically finds and extracts tournament information
+- **Interactive Web Interface**: Built with Streamlit for easy navigation
+- **Database Storage**: SQLite database for persistent data
+- **Export Options**: Download data in multiple formats
+- **Real-time Updates**: Collect fresh data on demand
 
-### 5. Run the Application
-```bash
-# Option 1: Streamlit UI (Recommended)
-python main.py streamlit
-
-# Option 2: FastAPI Backend
-python main.py api
-
-# Option 3: Collect data manually
-python main.py collect
-```
-
-## 🎯 What This App Does
-
-- **Collects** upcoming sports tournaments from the web
-- **Displays** them in a beautiful Streamlit interface
-- **Filters** by sport, level, and date
-- **Exports** data to CSV/JSON
-- **Uses AI** to extract and summarize tournament information
-
-## 🏟️ Supported Sports
-Cricket, Football, Badminton, Running, Gym, Cycling, Swimming, Kabaddi, Yoga, Basketball, Chess, Table Tennis
-
-## 📊 Supported Levels
-Corporate, School, College, Club, District, State, Regional, National, International
-
-## 🔑 Required Setup
-
-**Only one API key needed:**
-- **OpenAI API Key**: Get $5 free credit at https://platform.openai.com/
-- **Search**: Uses free DuckDuckGo (no API key needed)
-
-## 🛠️ Troubleshooting
-
-### Common Issues:
-1. **Port already in use**: Change port in main.py or kill existing process
-2. **API key error**: Make sure .env file exists and has correct OPENAI_API_KEY
-3. **Import errors**: Make sure virtual environment is activated
-
-### Reset Everything:
-```bash
-# Delete and recreate virtual environment
-rmdir /s venv
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python main.py init
-```
-
-## 📁 Project Structure
-```
-├── main.py              # Main entry point
-├── src/
-│   ├── app.py          # Streamlit frontend
-│   ├── api.py          # FastAPI backend
-│   ├── data_collection.py  # Data collection logic
-│   └── db_utils.py     # Database operations
-├── data/               # SQLite database
-└── exports/            # Exported data files
-```
-
-## 🎮 Usage Examples
-
-```bash
-# Initialize everything
-python main.py init
-
-# Start the web app
-python main.py streamlit
-
-# In another terminal, collect data
-python main.py collect
-
-# Export data
-python main.py export
-```
-
-That's it! The app will open in your browser at http://localhost:8501
-
----
-
-**Need help?** Check the logs or create an issue with error details.
+That's it! A simple but powerful sports tournament discovery tool powered by AI.
