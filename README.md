@@ -11,15 +11,7 @@ This is a **GenAI-powered sports tournament calendar application** that:
 - **Supports** multiple sports: Cricket, Football, Badminton, Running, Gym, Cycling, Swimming, Kabaddi, Yoga, Basketball, Chess, Table Tennis
 - **Covers** various levels: Corporate, School, College, Club, District, State, Regional, National, International
 
-## Quick Start
 
-1. **Setup**: `python -m venv venv && venv\Scripts\activate`
-2. **Install**: `pip install -r requirements.txt`
-3. **Configure**: Copy `env_example.txt` to `.env` and add your OpenAI API key
-4. **Initialize**: `python main.py init`
-5. **Run**: `python main.py streamlit`
-
-The app will open in your browser at http://localhost:8501
 
 ## Features
 
